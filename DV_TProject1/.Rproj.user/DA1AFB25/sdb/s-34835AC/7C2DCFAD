@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445713722138.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7C2DCFAD",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "cuwcwullsk",
+        "caption" : "df",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=df&cache_key=cuwcwullsk",
+        "displayedObservations" : 72,
+        "environment" : "_rs_no_env",
+        "object" : "df",
+        "totalObservations" : 72,
+        "variables" : 22
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

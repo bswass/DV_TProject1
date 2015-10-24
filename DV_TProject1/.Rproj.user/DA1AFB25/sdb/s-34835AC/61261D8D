@@ -1,0 +1,18 @@
+{
+    "contents" : "require(\"jsonlite\")\nrequire(\"RCurl\")\n# Change the USER and PASS below to be your UTEid\ndf <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query=\"select * from shootingsmass\"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521/PDBF15DV.usuniversi01134.oraclecloud.internal', USER='cs329e_btb687', PASS='orcl_btb687', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE), ))\n\nView(df)\n",
+    "created" : 1445713668159.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2325867349",
+    "id" : "61261D8D",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
