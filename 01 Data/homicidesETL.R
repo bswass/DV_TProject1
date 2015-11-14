@@ -2,7 +2,7 @@ require(tidyr)
 require(dplyr)
 require(ggplot2)
 
-setwd("C:/DataViz/4. Tableau Project 1/01 Data")
+setwd("C:/Users/Chris/Desktop/DataVisualization/DV_TProject1/01 Data")
 
 file_path <- "Homicides.csv"
 
