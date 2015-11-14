@@ -1,12 +1,12 @@
 {
-    "contents" : "require(\"jsonlite\")\nrequire(\"RCurl\")\nrequire(ggplot2)\nrequire(dplyr)\nrequire(extrafont)\n\ndf <- data.frame(fromJSON(getURL(URLencode('skipper.cs.utexas.edu:5001/rest/native/?query=\"select * from shootingsmass\"'),httpheader=c(DB='jdbc:oracle:thin:@sayonara.microlab.cs.utexas.edu:1521:orcl', USER='C##cs329e_btb687', PASS='orcl_btb687', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE), ))\nView (df)\n\nggplot() + \n  coord_cartesian() + \n  scale_x_discrete() +\n  scale_y_continuous() +\n  #facet_grid(FATALITIES, labeller=label_both) +\n  labs(title='Mass Shootings') +\n  labs(x=\"Venue\", y=paste(\"Total Victims\")) +\n  layer(data=df, \n        mapping=aes(x=VENUE, y=as.numeric(as.character(TOTAL_VICTIMS)), color=FATALITIES), \n        stat=\"identity\", \n        stat_params=list(), \n        geom=\"point\",\n        geom_params=list(), \n        #position=position_identity()\n        position=position_jitter(width=0.3, height=0)\n  )",
+    "contents" : "require(\"jsonlite\")\nrequire(\"RCurl\")\nrequire(ggplot2)\nrequire(dplyr)\nrequire(extrafont)\n\ndf <- data.frame(fromJSON(getURL(URLencode('skipper.cs.utexas.edu:5001/rest/native/?query=\"select * from shootingsmass\"'),httpheader=c(DB='jdbc:oracle:thin:@sayonara.microlab.cs.utexas.edu:1521:orcl', USER='C##cs329e_btb687', PASS='orcl_btb687', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE), ))\nView (df)\n\nggplot() + \n  coord_cartesian() + \n  scale_x_discrete() +\n  scale_y_continuous() +\n  #facet_grid(FATALITIES, labeller=label_both) +\n  labs(title='Mass Shootings') +\n  labs(x=\"Venue\", y=paste(\"INJURED\")) +\n  layer(data=df, \n        mapping=aes(x=VENUE, y=as.numeric(as.character(INJURED))), \n        stat=\"identity\", \n        stat_params=list(), \n        geom=\"point\",\n        geom_params=list(), \n        #position=position_identity()\n        position=position_jitter(width=0.3, height=0)\n  )\n\nggplot() + \n  coord_cartesian() + \n  scale_x_discrete() +\n  scale_y_continuous() +\n  #facet_grid(FATALITIES, labeller=label_both) +\n  labs(x=\"Venue\", y=paste(\"FATALITIES\")) +\n  layer(data=df, \n        mapping=aes(x=VENUE, y=as.numeric(as.character(FATALITIES))), \n        stat=\"identity\", \n        stat_params=list(), \n        geom=\"point\",\n        geom_params=list(), \n        #position=position_identity()\n        position=position_jitter(width=0.3, height=0)\n  )",
     "created" : 1447290335036.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1825122993",
+    "hash" : "3084898578",
     "id" : "23587477",
-    "lastKnownWriteTime" : 1447293176,
+    "lastKnownWriteTime" : 1447459643,
     "path" : "C:/DataViz/4. Tableau Project 1/01 Data/Shooting_ScatterPlot.R",
     "project_path" : null,
     "properties" : {

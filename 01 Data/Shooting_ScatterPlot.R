@@ -13,9 +13,25 @@ ggplot() +
   scale_y_continuous() +
   #facet_grid(FATALITIES, labeller=label_both) +
   labs(title='Mass Shootings') +
-  labs(x="Venue", y=paste("Total Victims")) +
+  labs(x="Venue", y=paste("INJURED")) +
   layer(data=df, 
-        mapping=aes(x=VENUE, y=as.numeric(as.character(TOTAL_VICTIMS)), color=FATALITIES), 
+        mapping=aes(x=VENUE, y=as.numeric(as.character(INJURED))), 
+        stat="identity", 
+        stat_params=list(), 
+        geom="point",
+        geom_params=list(), 
+        #position=position_identity()
+        position=position_jitter(width=0.3, height=0)
+  )
+
+ggplot() + 
+  coord_cartesian() + 
+  scale_x_discrete() +
+  scale_y_continuous() +
+  #facet_grid(FATALITIES, labeller=label_both) +
+  labs(x="Venue", y=paste("FATALITIES")) +
+  layer(data=df, 
+        mapping=aes(x=VENUE, y=as.numeric(as.character(FATALITIES))), 
         stat="identity", 
         stat_params=list(), 
         geom="point",
