@@ -2,6 +2,10 @@ Mass Shooting
 =============
 
 ```{r}
+source("C:/Users/Chris/Desktop/DataVisualization/DV_TProject1/01 Data/shootingsmassETL.R", echo = TRUE)
+```
+
+```{r}
 source("C:/Users/Chris/Desktop/DataVisualization/DV_TProject1/01 Data/homicidesETL.R", echo = TRUE)
 ```
 
@@ -46,5 +50,16 @@ This barchart displays each incident per year since 1982. Each bar is labeled wi
 
 ![](./BarChart.jpg)
 
+###Blending Line Plot
+
+```{r}
+source("C:/Users/Chris/Desktop/DataVisualization/DV_TProject1/01 Data/Homicides_Plot.R", echo = TRUE)
+```
+
+'''
+These two line plots display the number of homicides in the US and the number of fatalities in mass shootings, respectively, per year from 1992 - 2011. Each plot is labeled by year and either homicides or fatalities. These plots are interesting because they depict how for every local minumum and maxium in the homicides line plot, there is a considerable increase in fatalities of mass shootings. As the number of fatalities in US mass shootings has fluctuated over the time period, the number of homicides in the US has slowly declined. 
+'''
+
+![](./Blending.jpg)
 
 
